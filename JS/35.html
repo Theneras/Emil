@@ -1,0 +1,35 @@
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Moja strona WWW</title>
+</head>
+<body>
+    <script type="text/javascript">
+    
+    function wyswietlDate(){
+        var Today = new Date();
+        var Month = (Today.getMonth()+1);
+        var Day = Today.getDate();
+        var Year = Today.getFullYear();
+        if(Year <= 99)    Year += 1900
+        return  Day + "-" + Month + "-" + Year;
+    }
+    
+var agent = navigator.userAgent.toLowerCase();
+var nazwa = "nieznany";
+var x = "Version Info: " + navigator.appVersion;
+ document.write("</br>wersja przeglądarki:</br>="+navigator.appVersion);
+ var x = "Java Enabled: " + navigator.javaEnabled();
+ document.write("</br>Obsługa java:</br>="+ navigator.javaEnabled());
+if(agent.indexOf('windows') != -1){nazwa = "Windows</br>";}
+if(agent.indexOf('linux') != -1)         {nazwa = "Linux";}
+else if(agent.indexOf('mac') != -1)   {nazwa = "MacOS";}
+document.write("</br>Twój system to:</br> " + nazwa);
+document.write("Dzisiaj jest " + wyswietlDate());
+if((navigator.appName=="chrome") && (parseInt(navigator.appName)>=3))
+if(agent.indexOf('chrome') != -1){nazwa = "chrome";}
+{ document.write("</br>mam przeglądarkę="+navigator.appName);}
+</script>
+</body>
+</html>

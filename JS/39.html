@@ -1,0 +1,35 @@
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Moja strona WWW</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function ZSE_Open() 
+    {
+        window.location = "http://zse.gda.pl";
+    }
+    function OKE_Open() 
+{
+    window.location = "http://oke.gda.pl";
+
+}
+  function Fb_Open() 
+{
+    window.location = "https://pl-pl.facebook.com";
+}
+function od_Open() 
+{
+    window.location = "file:///C:/Users/emitel/Desktop/java/39.html";
+}
+</script>
+<form>
+    <input type="button" name="przycisk1" value="Strona ZSE" onclick="setTimeout(function(){ZSE_Open();},4000)">
+    <input type="button" name="przycisk2" value="Strona OKE" onclick="setTimeout(function(){OKE_Open();},6000)">
+    <input type="button" name="przycisk3" value="facebook" onclick="setTimeout(function(){Fb_Open();},10000)">
+    <input type="button" name="przycisk3" value="Odświerzenie" onclick="setTimeout(function(){od_Open();},8000)">
+</form>   
+    
+</body>
+</html>

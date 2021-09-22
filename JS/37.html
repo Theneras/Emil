@@ -1,0 +1,28 @@
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Moja strona WWW</title>
+</head>
+<body>
+    <script type="text/javascript">
+    document.write("Podstawowe informacje o dokumencie:<br />");
+    document.write("Tryb kompatybilności: ");
+    document.write(document.compatMode + "<br />");
+    document.write("URL: " + document.URL + "<br />");
+    document.write("Liczba apletów: ");
+    document.write(document.applets.length + "<br />");
+    document.write("Liczba obrazów: ");
+    document.write(document.images.length + "<br />");
+    document.write("Liczba formularzy: ");
+    document.write(document.forms.length + "<br />");
+    document.write("Tytuł: " + document.title + "<br />");
+    document.write("Dataostatniej modyfikacji: ");
+    document.write(document.lastModified + "<br />");
+    document.write("kodowanie: ");
+    document.write(document.characterSet  + "<br />");
+    document.write("Wielkość pliku: ");
+    document.write(document.fileSize  + "<br />");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Moja strona WWW</title>
+</head>
+<body>
+<script type="text/javascript">
+document.write("mam przeglądarkę= "+navigator.appName);
+var agent = navigator.userAgent.toLowerCase();
+var nazwa = "nieznany";
+var x = "Browser CodeName: " + navigator.appCodeName;
+if((navigator.appName=="chrome") && (parseInt(navigator.appVersion)>=3))
+{ document.write("mam przeglądarkę="+navigator.app);}
+else
+{document.write("Masz niewłaściwą wersję przeglądarki!!!");}
+if(agent.indexOf('chrome') != -1){nazwa = "chrome";}
+if(agent.indexOf('opera') != -1){nazwa = "Opera";}
+else if(agent.indexOf('konqueror') != -1){nazwa = "Konqueror";}
+else if(agent.indexOf('netscape') != -1){nazwa = "Netscape Navigator";}
+else if(agent.indexOf('msie') != -1){nazwa = "Internet Explorer";}
+document.write("Twoja przeglądarka to: " + nazwa);
+</script>
+</body>
+</html>
