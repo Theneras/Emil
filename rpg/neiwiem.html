@@ -1,0 +1,70 @@
+<html lang="pl">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="niewiem.css" type="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <title>Moja strona WWW</title>
+    </head>
+    <body>
+       
+   <nav>
+    
+   <div id="lewo">
+   </div>
+</nav>
+<div id="right">
+    <form>
+        <input type="text" value="NICK" id="imie">
+        <select id="kla" onchange="klasy()">
+            <option value="1">Wojownik</option>
+            <option value="2">Mag</option>
+            <option value="3">łucznik</option>
+        </select>
+    </form>
+</div>
+<div id="mainl">
+    
+    <p>HP <br>
+    Mana <br>
+    Strenght <br>
+    Agility <br>
+    Intelligence <br>
+    Gold <br></p>
+</div>
+<div id="b">
+
+</div>
+   <script>
+            function klasa(hp,mana,str,ag,inte,gold)
+            {
+                this.hp = hp;
+                this.mana = mana;
+                this.str = str;
+                this.ag = ag;
+                this.inte = inte;
+                this.gold = gold;
+            }
+            var Wojownik = new klasa(11,8,13,13,9,9);
+            var Mag = new klasa(14,10,11,11,9,11);
+            var Łucznik = new klasa(10,11,10,14,11,8);
+            function klasy(){
+                var a = document.getElementById("kla");
+                var c = a.value;
+                switch(c){
+                    case '1': b.innerHTML=Wojownik.hp+"<br>"+Wojownik.mana+"<br>"+Wojownik.str+"<br>"+Wojownik.ag+"<br>"+Wojownik.inte+"<br>"+Wojownik.gold; break;
+                    case '2': b.innerHTML=Mag.hp+"<br>"+Mag.mana+"<br>"+Mag.str+"<br>"+Mag.ag+"<br>"+Mag.inte+"<br>"+Mag.gold; 
+                    break;
+                    case '3': b.innerHTML=Łucznik.hp+"<br>"+Łucznik.mana+"<br>"+Łucznik.str+"<br>"+Łucznik.ag+"<br>"+Łucznik.inte+"<br>"+Łucznik.gold; break;
+                        default: b.innerHTML="Error"; break;
+                }
+                left.innerHTML=c;
+            }
+        </script>
+   </script>
+  
+
+    
+    
+    </body>
+    </html>
+    
