@@ -1,0 +1,73 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+    
+}
+#result {
+	height: 120px;
+    width: 268px;
+    background-color: yellowgreen;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#history {
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color:black;
+}
+
+#output {
+	text-align: left;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+
+#keyboard {
+	height: 350px;
+    float: left;
+    border: black;
+    border-style: solid;
+    border-width: 5px;
+    background-color: darkgreen;
+}
+
+.operator, .number, .empty {
+    background-color: yellow;
+	width: 27px;
+	height: 27px;
+	margin: 20px;
+	float: left;
+	border-radius: 100%;
+	border-width: 0;
+	font-weight: 20px;
+	font-size: 15px;
+    
+    display: flex;
+}
+
+.number, .empty {
+	background-color: yellowgreen;
+}
+
+.number, .operator {
+	cursor: pointer;
+   
+}
+
+.operator:active, .number:active {
+
+	font-size: 13px;
+}
+
+.operator:focus, .number:focus, .empty:focus {
+    
+	outline: 0;
+}
+
+
