@@ -1,0 +1,41 @@
+style
+*{
+    font-family: Verdana;
+    }
+#title{
+    background-color:green;
+    width: 100%;
+    height: 100px;
+    }
+
+#prawy{
+    width: 50%;
+    height: 800px;
+    float: right;
+    background-color: blue;
+
+
+}
+#lewy{
+    width: 50%;
+    height: 800px;
+    float: left;
+    background-color: red;
+}
+#stopka{
+    width: 100%;
+    height: 200px;
+    background-color:darkred;
+    float:left
+}
+#rycerz img{
+    width: 200px;
+    height: 200px;
+    float:left
+    
+}
+#smok img{
+    width: 200px;
+    height: 200px;
+    float: right;
+}

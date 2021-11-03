@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="pl" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+</head>
+<script>
+    function armia(){
+    var muszkiet=parseInt(musz.value);
+    var kawalerzy=parseInt(kwl.value);
+    var artylerzy=parseInt(art.value);
+    nasza.innerHTML="Nasza Armia składa się z:<br>"+muszkiet+"muszkieterów<br>"+kawalerzy+"kawalerzystów<br>"+artylerzy+"artylerzystów<br>"
+    rycerz.innerHTML="<img src=\"rycerz.gif\">";
+    }
+
+    function wrog(){
+
+    var muszkiet=parseInt(musz.value);
+    var kawalerzy=parseInt(kwl.value);
+    var artylerzy=parseInt(art.value);
+
+    var awje1=Math.round(Math.random()*18+2+1)+2;
+    var awje2=Math.round(Math.random()*18+2+1)+2;
+    var awje3=Math.round(Math.random()*18+2+1)+2;
+    var musz1=Math.pow(muszkiet, awje1)
+    var kawal1=Math.pow(kawalerzy, awje2)
+    var artyler1=Math.pow(artylerzy, awje3)
+    wroga.innerHTML="Wroga Armia składa się z:<br>"+musz1+"muszkieterów<br>"+kawal1+"kawalerzystów<br>"+artyler1+"artylerzystów<br>"
+    smok.innerHTML="<img src=\"smok.gif\">";
+    }
+</script>
+<body>
+    
+
+    <div id="title">
+        <img src="b1.png" a href="https://pl.wikipedia.org/wiki/Burgundia" alt="BRG">
+    </div>
+    
+    <div id="lewy">
+        <h1>Nasza Armia składa się z:</h1>
+        <div id="nasza"></div>
+        <h1>Wroga Armia składa się z:</h1>
+        <div id ="wroga"></div>
+    </div>
+
+    <div id="prawy">
+        Podaj liczbe muszkieterów
+        <input type="number" id="musz">   </br>
+        Podaj liczbe kawalerzystów
+        <input type="number" id="kwl">  </br>
+        Podaj liczbe artylerzystów
+        <input type="number" id="art"> </br>
+        <input type="submit" onclick="armia()" value="Oblicz moja armie">
+        <input type="submit" onclick="wrog()"  value="Oblicz wroga armie">
+        
+
+    </div>
+    <div id="stopka">
+     <div id="rycerz"></div> <div id="smok"></div>
+    </div>
+</body>
+
+
+
+
+</html>
